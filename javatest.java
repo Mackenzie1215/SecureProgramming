@@ -1,5 +1,5 @@
-/* First issue  NUM04-J. Do not use floating-point numbers 
-   if precise computation is required 
+/* First issue - CORRECTED
+NUM04-J. Do not use floating-point numbers if precise computation is required
 
 https://wiki.sei.cmu.edu/confluence/display/java/OBJ10-J
 .+Do+not+use+public+static+nonfinal+fields
@@ -8,17 +8,17 @@ https://wiki.sei.cmu.edu/confluence/display/java/OBJ10-J
 public class javatest{
     public static void main(String args[]) {
 
-	double dollar = 1.00;
-	double nickels = 0.05;
+	int dollar = 100;
+	int nickels = 5;
 	int number = 17;
 
 	System.out.println(
- 	 "A dollar less " + number + " dimes is $" + (dollar - number * nickels) 
+ 	 "A dollar less " + number + " dimes is $0." + (dollar - number * nickels)
 	);
     
 
 
-/*Second issue
+/*Second issue - CORRECTED
 DCL50-J. Use visually distinct identifiers
 
 https://wiki.sei.cmu.edu/confluence/display/java/DCL50-J.
@@ -26,24 +26,24 @@ https://wiki.sei.cmu.edu/confluence/display/java/DCL50-J.
 */
 
 
-	int stubs = 2;
-	int stub = 1;
+	int two = 2;
+	int one = 1;
 
-	System.out.println("\nstubs = " + stubs);
+	System.out.println("\nstubs = " + two);
 
-	System.out.println("stub = " + stub);
+	System.out.println("stub = " + one);
 
 
 
-/*third issue
+/*third issue - CORRECTED
 DCL53-J. Minimize the scope of variables
 
 https://wiki.sei.cmu.edu/confluence/display/java/DCL53-J.
 +Minimize+the+scope+of+variables
 */
 
-	int i = 0;
-	for (i=0; i<25; i++) {
+	//int i = 0;
+	for (int i=0; i<25; i++) {
 		System.out.println(i);
 
 	}
